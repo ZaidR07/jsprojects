@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            background-color: chartreuse;
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+
+
+        }
+
+        .conatiner {
+            width: 40%;
+            /* background-color: brown; */
+            height: 80vh;
+        }
+
+        .face {
+            border-radius: 140px 140px 120px 120px;
+            width: 140px;
+            height: 120px;
+            margin-top: 10px;
+            background-color: #ffffff;
+            border: 2px solid #2e0d30;
+            z-index: 1;
+
+
+        }
+
+        .form {
+            width: 80%;
+            height: 50vh;
+            background-color: white;
+            margin-left: 10%;
+            display: grid;
+            place-items: center;
+
+
+        }
+
+        .teddy {
+            display: grid;
+            place-items: center;
+            height: 20vh;
+        }
+
+        .lear {
+            border: 2px solid #2e0d30;
+            border-radius: 2.5em 2.5em 0 0;
+            width: 45px;
+            height: 40px;
+            background-color: black;
+            position: absolute;
+            transform: rotate(315deg) translateX(-23px) translateY(-62px);
+
+
+        }
+
+        .rear {
+            border: 2px solid #2e0d30;
+            border-radius: 2.5em 2.5em 0 0;
+            width: 45px;
+            height: 40px;
+            background-color: black;
+            position: absolute;
+            transform: rotate(45deg) translateX(23px) translateY(-62px);
+
+        }
+
+        .leye {
+            width: 30px;
+            height: 34px;
+            background-color: black;
+            border: 0.5px solid #2e0d30;
+            border-radius: 100%;
+            position: absolute;
+            transform: rotate(-6deg) translateX(23px) translateY(28px);
+
+        }
+
+        .reye {
+            width: 30px;
+            height: 34px;
+            background-color: black;
+            border: 0.5px solid #2e0d30;
+            border-radius: 100%;
+            position: absolute;
+            transform: rotate(360deg) translateX(80px) translateY(25px);
+
+        }
+
+        .lball {
+            width: 11px;
+            height: 11px;
+            background-color: #ffffff;
+            border: 0.5px solid #2e0d30;
+            border-radius: 100%;
+            position: absolute;
+            transform: translateX(8px) translateY(8px);
+
+        }
+
+        .rball {
+            width: 11px;
+            height: 11px;
+            background-color: #ffffff;
+            border: 0.5px solid #2e0d30;
+            border-radius: 100%;
+            position: absolute;
+            transform: translateX(8px) translateY(8px);
+
+        }
+
+
+
+
+
+
+
+
+
+        .nose {
+            width: 15px;
+            height: 15px;
+            background-color: black;
+            border: 0.5px solid #2e0d30;
+            transform: translateX(60px) translateY(60px) rotate(45deg);
+            border-radius: 16px 4px 0px 4px;
+
+        }
+
+        .noseline {
+            width: 1.5px;
+            height: 15px;
+            background-color: black;
+            transform: translateX(17px) translateY(10px) rotate(-45deg);
+
+        }
+
+        .lmouth {
+            width: 15px;
+            height: 15px;
+            background-color: white;
+            border-bottom: 3px solid #2e0d30;
+            transform: translateX(51px) translateY(65px) rotate(339deg);
+            border-radius: 4px 0px 4px 16px;
+
+        }
+
+        .rmouth {
+            width: 15px;
+            height: 15px;
+            background-color: white;
+            border-top: 3px solid #2e0d30;
+
+            transform: translateX(70px) translateY(50px) rotate(200deg);
+            border-radius: 16px 4px 0px 4px;
+
+        }
+
+        .lhand {
+            border: 2px solid #2e0d30;
+            border-radius: 2.5em 2.5em 0 0;
+            width: 40px;
+            height: 42px;
+            background-color: black;
+            position: absolute;
+            transform: rotate(180deg) translateX(60px) translateY(-47px);
+        }
+
+        .rhand {
+            border: 2px solid #2e0d30;
+            border-radius: 2.5em 2.5em 0 0;
+            width: 40px;
+            height: 42px;
+            background-color: black;
+            position: absolute;
+            transform: rotate(180deg) translateX(-160px) translateY(-47px);
+        }
+
+        .lpaw {
+            border: 2px solid #2e0d30;
+            border-radius: 2.5em 2.5em 16px 16px;
+            width: 48px;
+            height: 45px;
+            background-color: black;
+            position: absolute;
+            transform: rotate(0deg) translateX(-9px) translateY(344px);
+        }
+
+        .rpaw {
+            border: 2px solid #2e0d30;
+            border-radius: 2.5em 2.5em 16px 16px;
+            width: 48px;
+            height: 45px;
+            background-color: black;
+            position: absolute;
+            transform: rotate(0deg) translateX(100px) translateY(344px);
+        }
+
+        .innerleftpaw {
+            border: 2px solid #2e0d30;
+            border-radius: 2.5em 2.5em 16px 16px;
+            width: 30px;
+            height: 23px;
+            background-color: #ffffff;
+            position: absolute;
+            transform: rotate(0deg) translateX(1px) translateY(362px);
+
+        }
+
+        .dot1 {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: white;
+            position: absolute;
+            transform: rotate(0deg) translateX(-2px) translateY(355px);
+        }
+
+        .dot2 {
+
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: white;
+            position: absolute;
+            transform: rotate(0deg) translateX(10px) translateY(348px);
+
+        }
+
+
+
+        .dot3 {
+
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: white;
+            position: absolute;
+            transform: rotate(0deg) translateX(22px) translateY(355px);
+
+        }
+
+        .dot4 {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: white;
+            position: absolute;
+            transform: rotate(0deg) translateX(107px) translateY(355px);
+
+
+        }
+
+        .dot5 {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: white;
+            position: absolute;
+            transform: rotate(0deg) translateX(120px) translateY(348px);
+        }
+
+        .dot6 {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: white;
+            position: absolute;
+            transform: rotate(0deg) translateX(132px) translateY(355px);
+        }
+
+        .innerrightpaw {
+            border: 2px solid #2e0d30;
+            border-radius: 2.5em 2.5em 16px 16px;
+            width: 30px;
+            height: 23px;
+            background-color: #ffffff;
+            position: absolute;
+            transform: rotate(0deg) translateX(110px) translateY(362px);
+        }
+
+        .innerform {
+            width: 75%;
+            height: 30vh;
+        }
+
+        #uname {
+            padding: 4px;
+            width: 100%;
+            border: none;
+            border-bottom: 1.5px solid black;
+            margin-top: 4px;
+            outline: none;
+        }
+
+        #pass {
+            width: 100%;
+            border: none;
+            border-bottom: 1.5px solid black;
+            padding: 4px;
+            margin-top: 4px;
+            outline: none;
+
+
+        }
+
+        #login {
+            width: 100%;
+            height: 5vh;
+            margin-top: 5vh;
+            color: #ffffff;
+            background-color: crimson;
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conatiner">
+        <div class="teddy">
+            <div class="lear">
+
+            </div>
+            <div class="rear">
+
+            </div>
+            <div class="face">
+
+                <div class="leye">
+                    <div class="lball" id="lball">
+
+                    </div>
+                </div>
+                <div class="reye">
+                    <div class="rball" id="rball">
+
+                    </div>
+                </div>
+                <div class="lblush">
+
+                </div>
+                <div class="rblush">
+
+                </div>
+                <div class="nose">
+                    <div class="noseline">
+
+                    </div>
+                </div>
+                <div class="lmouth">
+
+                </div>
+                <div class="rmouth">
+
+                </div>
+                <div class="lhand" id="lhand">
+
+                </div>
+                <div class="rhand" id="rhand">
+
+                </div>
+                <div class="lpaw">
+
+                </div>
+                <div class="innerleftpaw">
+
+                </div>
+                <div class="dot1">
+
+                </div>
+                <div class="dot2">
+
+                </div>
+                <div class="dot3">
+
+                </div>
+                <div class="dot4">
+
+                </div>
+                <div class="dot5">
+
+                </div>
+                <div class="dot6">
+
+                </div>
+                <div class="rpaw">
+
+                </div>
+                <div class="innerrightpaw">
+
+                </div>
+                <div class="dot4">
+
+                </div>
+                <div class="dot5">
+
+                </div>
+                <div class="dot6">
+
+                </div>
+
+            </div>
+        </div>
+        <div class="form">
+            <div class="innerform">
+                <b><label for="">Enter your username</label><br></b>
+                <input type="text" placeholder="username" id="uname"><br><br>
+                <b><label for="">Enter your Password</label><br></b>
+                <input type="password" placeholder="Password" id="pass">
+                <button id="login">Login</button>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        let username = document.getElementById("uname");
+        let passw = document.getElementById("pass");
+        let lhand = document.getElementById("lhand");
+        let rhand = document.getElementById("rhand");
+        let lball = document.getElementById("lball");
+
+
+
+    
+        const handfunc = () => {
+            lhand.style.cssText = "transform: rotate(36deg) translateX(-16px) translateY(-22px); height: 110px";
+            rhand.style.cssText = "transform: rotate(-36deg) translateX(97px) translateY(36px); height: 110px";
+
+        }
+        const eyefunc = () =>{
+            lball.style.cssText = "transform: translateX(11px) translateY(17px);"
+            rball.style.cssText = "transform: translateX(6px) translateY(17px);"
+
+            
+        }
+        username.addEventListener('click', eyefunc); 
+        username.addEventListener('mouseleave', () => {
+            rball.style.cssText = "";
+            lball.style.cssText = "";
+
+        });
+        passw.addEventListener('click', handfunc);
+        passw.addEventListener('mouseleave', () => {
+            lhand.style.cssText = "";
+            rhand.style.cssText = "";
+
+        });
+    </script>
+    
+</body>
+
+</html>
